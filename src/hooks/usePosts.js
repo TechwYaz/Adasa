@@ -6,7 +6,7 @@ export function usePosts() {
   useEffect(() => {
     let isMounted = true
 
-    fetch('/data/posts.json')
+    fetch(`${import.meta.env.BASE_URL}data/posts.json`)
       .then((response) => response.json())
       .then((data) => {
         if (isMounted) {
